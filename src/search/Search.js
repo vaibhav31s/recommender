@@ -12,30 +12,34 @@ function Search({ details }) {
         // setSearchField(e.target.value);
     };
 
+    const  [input, setInput]= useState("");
     return (
         <div className="search-container">
-                <div class="input-group">
-                    <div class="form-outline">
-                        <input type="search" id="form1" class="form-control" list='input' placeholder='search'/>
-                        {/* <List/> */}
-                        <datalist id="input">
-                            {
-                                data.map((item)=>{
-                                    return(
-                                        <option value={item.seller}>{item.sellerx}</option>
-                                    )
-                                })
-                            }
-                        </datalist>
-                       
+
+            <div class="input-group">
+                <div class="form-outline">
+                    <input type="search" id="form1" class="form-control" list='input' placeholder='search' />
+                    {/* <List/> */}
+                    <datalist id="input">
+                        {
+                            data.map((item) => {
+                                return (
+                                    <option value={item.text}>{item.text}</option>
+                                )
+                            })
+                        }
+                    </datalist>
 
 
 
-                    </div>
-                    <Link className="btn btn-primary" onClick={click} to="/search">
-                        <BsSearch />
-                    </Link>
                 </div>
+                <Link className="btn btn-primary" to={{
+                                pathname: "/search",
+                                state: { input: input }
+                            }}>
+                    <BsSearch />
+                </Link>
+            </div>
         </div>
     );
 }

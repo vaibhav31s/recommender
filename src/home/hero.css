@@ -4,7 +4,7 @@
 }
 
 .home .slide-container .slide {
-  min-height: 100vh;
+  min-height: calc(100vh - 9.5rem);
   display: flex;
   align-items: center;
   /* flex-wrap: wrap; */
@@ -124,8 +124,7 @@
 
 .home #prev:hover,
 .home #next:hover {
-  color: #fff;
-  background: var(--orange);
+  color: var(--blue);
 }
 
 .home #prev {
@@ -137,6 +136,7 @@
 }
 
 .btn-add_to_cart {
+  font-size: 1rem;
   background: transparent;
   color: rgb(0, 0, 0);
   border: 2px solid rgb(0, 0, 0);
@@ -145,8 +145,59 @@
   transition: background 300ms ease;
 }
 
-.btn-add_to_cart:hover{
-  background: var(--blue) ;
+.btn-add_to_cart:hover {
+  background: var(--blue);
   color: #fff;
   border: none;
+}
+
+
+@media (max-width : 900px) {
+  .home .slide-container:nth-child(1) .slide {
+    background: url(../images/home-bg-1.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 1rem;
+  }
+
+  .home .slide-container:nth-child(2) .slide {
+    background: url(../images/home-bg-2.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .home .slide-container:nth-child(3) .slide {
+    background: url(../images/home-bg-3.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .home .slide-container .slide {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 1rem;
+    padding: 0 1%;
+    flex-direction: column;
+  }
+
+
+  .home .slide-container .slide .image .shoe {
+    width: 65%;
+    position: static;
+  }
+
+  .home .slide-container .slide .content {
+    flex: 1 1 auto;
+    font-size: unset;
+  }
+
+
+  .home .slide-container .slide .image {
+    padding-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 0;
+  }
 }

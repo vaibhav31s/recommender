@@ -10,6 +10,9 @@
 
 :root {
   --blue: #007bff;
+  --grey: #f0f0f0;
+  --orange: rgb(255, 182, 24);
+  --red: red;
 }
 
 body {

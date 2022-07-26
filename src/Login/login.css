@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   color: #cacaca;
-  height: calc(100vh - 5rem);
+  height: calc(100vh - 9.5rem);
   background: rgb(2, 0, 36);
   background: linear-gradient(177deg, rgba(2, 0, 36, 1) 0%, rgb(248 255 245) 0%, rgb(255 255 255) 52%, rgb(202 247 255) 90%);
 }

@@ -31,7 +31,7 @@
     text-transform: uppercase;
     font-size: 13px;
     font-weight: 700;
-    background: red;
+    background: var(--red);
     color: #fff;
     padding: 3px 10px;
 }
@@ -42,7 +42,7 @@
     justify-content: center;
     height: 150px;
     padding: 20px;
-    background: #f0f0f0;
+    background: var(--grey);
 }
 
 .product-tumb img {

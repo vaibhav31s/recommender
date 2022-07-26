@@ -3,20 +3,23 @@ import Cards from '../card/Cards'
 import './recommendations.css'
 import Search from '../search/Search'
 import Recommended from '../home/Recommended'
+import { useLocation } from "react-router-dom"
 // import StarRating from 'react-svg-star-rating'
 const Recommendations = () => {
+  const location = useLocation();
+  console.log(location.state.img);
   return (
     <div class="s">
       <Search/>
       <div class="product_view">
         <div class="product_img">
-          <img class="img1" src="https://images.unsplash.com/photo-1493612276216-ee3925520721?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cmFuZG9tfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" />
+          {/* <img class="img1" src="https://images.unsplash.com/photo-1493612276216-ee3925520721?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cmFuZG9tfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" /> */}
+          <img class="img1" src={location.state.img} />
 
         </div>
         <div className="product_detail">
           <h1>Lorem ipsum dolor sit amet consectetur.</h1>
           <div className="desc">
-            <h2><span>-90%</span>$42749</h2>
             <small>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga facere, facilis voluptatem, consequuntur quibusdam aperiam harum sint dolorum deleniti nisi assumenda, molestias amet sit iure vero. Accusamus itaque, quo sequi recusandae sint minus sapiente assumenda.</small><br />
 
             <span class="fa fa-star checked"></span>
