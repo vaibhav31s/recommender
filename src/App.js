@@ -2,6 +2,7 @@
 import './App.css';
 import NavBar from './NavBar/navbar';
 import Login from './Login/login';
+import  Dashboard from './dashboard/Dashboard';
 import {
   BrowserRouter as Router,
   Switch,
@@ -19,8 +20,11 @@ function App() {
             <Route exact path="/">
               <div> hello</div>
               </Route>
-            <Route path="/login">
+              <Route path="/login">
               <Login />
+            </Route>
+            <Route path="/dashboard">
+              <Dashboard />
             </Route>
             <Route path="/register">
               <Register />

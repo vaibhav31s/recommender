@@ -1,10 +1,9 @@
-import React, { Component } from 'react';
-export class register extends Component {
-  render() {
-    return (
-        <div>register</div>
-    )
-  }
+import React from 'react'
+
+const register = () => {
+  return (
+    <div>register</div>
+  )
 }
 
 export default register
