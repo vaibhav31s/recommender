@@ -8,6 +8,7 @@ import SearchResult from "./search/SearchResult";
 import Search from "./search/Search";
 import Carousal from "./carousal/Carousal";
 import Cards from "./card/Cards";
+import Recommendations from "./recommendations/Recommendations";
 function App() {
   return (
     <div>
@@ -48,7 +49,7 @@ function App() {
                 <Register />
               </Route>
               <Route path="/recommendations">
-
+              <Recommendations/>
               </Route>
               <Route path="*"></Route>
             </Switch>
