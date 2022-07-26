@@ -55,8 +55,7 @@ function App() {
                 <Register />
               </Route>
               <Route path="/recommendations">
-
-                <Home/>
+                  <Recommendations/>
               </Route>
               <Route path="/product/:id">
                 <Home/>
