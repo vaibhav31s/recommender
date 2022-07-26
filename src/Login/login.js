@@ -1,6 +1,7 @@
 import React, { useState} from "react";
 import "./login.css";
 import {submit_login} from './SubmitEvent';
+import { Link } from "react-router-dom";
 
 
 const Login = () => {
@@ -32,6 +33,8 @@ const Login = () => {
                     <input type="password" class="register-input" placeholder="Password" onChange={(e)=>setPassword(e.target.value)}/>
                     <input type="submit" value="Login" class="register-button"/>
                 </form>
+
+                Don't have account? <Link>Register</Link>
             </div>
         </div>
     );

@@ -7,7 +7,7 @@ const Navbar = () => {
     <div>
       <nav className="navbar navbar-expand-lg navbar-light">
         <a className="navbar-brand" href="#">
-          &nbsp;&nbsp;Recommender
+          Recommender
         </a>
         <button
           className="navbar-toggler"
