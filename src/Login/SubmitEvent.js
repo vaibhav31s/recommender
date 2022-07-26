@@ -15,8 +15,8 @@ const submit_login = ()=>{
         email: email,
         password: password
     }
-    const url = "backend_url" + "/bLogin";
-    fetch(url)
+    const url = "backend_url" + "/login";
+    fetch(url, {})
     .then((response)=>response.json())
     .then((data)=>{
         //users data fetched!!!!
