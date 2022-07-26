@@ -2,13 +2,16 @@ import NavBar from "./NavBar/Navbar";
 import Login from "./Login/Login";
 import Dashboard from "./dashboard/Dashboard";
 import Home from './home/Home';
+
 import { BrowserRouter as Router, Switch, Route, useHistory } from "react-router-dom";
 import Register from "./Register/Register";
+
 import SearchResult from "./search/SearchResult";
 import Search from "./search/Search";
 
 import Carousal from "./carousal/Carousal";
 import Cards from "./card/Cards";
+import Recommendations from "./recommendations/Recommendations";
 
 function App() {
   console.log(window.location.pathname)
@@ -52,10 +55,12 @@ function App() {
                 <Register />
               </Route>
               <Route path="/recommendations">
+
                 <Home/>
               </Route>
               <Route path="/product/:id">
                 <Home/>
+
               </Route>
               <Route path="*"></Route>
             </Switch>
