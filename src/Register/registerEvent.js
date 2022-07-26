@@ -11,18 +11,15 @@ export default SubmitEvent
 const submit_registration = ()=>{
     const email = localStorage.getItem("b_email");
     const password = localStorage.getItem("b_password");
-    const address = localStorage.getItem("b_address")
-    const state = localStorage.getItem("b_state")
-    const city = localStorage.getItem("b_city")
-    const pincode = localStorage.getItem("b_pincodes")
+    const name = localStorage.getItem("b_name")
+    const username = localStorage.getItem("b_username")
+
 
     const userData = {
         email: email,
         password: password,
-        address : address,
-        state : state,
-        city : city,
-        pincode: pincode
+        name : name,
+        username : username
     }
     const url = "backend_url" + "/login";
     fetch(url, {})
