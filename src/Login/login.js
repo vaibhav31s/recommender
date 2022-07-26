@@ -1,36 +1,41 @@
-import React, { Component } from 'react';
-import './login.css';
-export class login extends Component {
-  render() {
+import React, { useState} from "react";
+import "./login.css";
+import {submit_login} from './SubmitEvent';
+
+
+const Login = () => {
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [sellerOrBuyer, setSellerOrBuyer] = useState("/login");
+
+    const LoginClick =()=>{
+        localStorage.setItem("b_email", email);
+        localStorage.setItem("b_password", password);
+        localStorage.setItem("endpoint", sellerOrBuyer);
+
+
+        console.log(sellerOrBuyer)
+        // submit_login();
+    }
     return (
-        <div class="container">
-        <div class="card">
-            <div class="top-row">
-                <h1>Hello again</h1>
-                <p>Log in with your email and password</p>
+        <div className="container container-login">
+            <div class="wrap">
+                <h1 class="register-title">Welcome</h1>        
+                <form action="#" onSubmit={LoginClick}>
+                    <div class="register-switch">
+                        <input type="radio" name="sex" value="F" id="sex_f" class="register-switch-input"  checked/>
+                        <label htmlFor="sex_f" class="register-switch-label" onClick={()=>{setSellerOrBuyer("/login")}}>Buyer</label>
+                        <input type="radio" name="sex" value="M" id="sex_m" class="register-switch-input" />
+                        <label htmlFor="sex_m" class="register-switch-label"  onClick={()=>{setSellerOrBuyer("/blogin")}}>Seller</label>
+                    </div>
+                    <input type="email" class="register-input" placeholder="Email address" onChange={(e)=>setEmail(e.target.value)}/>
+                    <input type="password" class="register-input" placeholder="Password" onChange={(e)=>setPassword(e.target.value)}/>
+                    <input type="submit" value="Login" class="register-button"/>
+                </form>
             </div>
-            <div class="card-details">
-                <input type="text" placeholder="Enter your name"/>
-                <i class="fa fa-envelope"></i>
-            </div>
-            <div class="card-details">
-                <input type="password" id="password-input" placeholder="Enter your password"/>
-                <i class="fa fa-lock"></i>
-                <span><small class="fa fa-eye-slash passcode"></small></span>
-                
-            </div>
-               <p class="forget">Forgot your password?</p>
-               
-                   <button class="sign-in">Sign in</button>
-              
-               <p class="sign-up">Dont't have an account?<a href="#"> Sign up</a></p>
-            
         </div>
-        
-    </div>
-    
-    )
-  }
+    );
 }
 
-export default login
+
+export default Login;
