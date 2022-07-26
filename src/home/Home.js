@@ -7,6 +7,7 @@ import Trending from './Trending'
 const Home = () => {
   return (
     <>
+        <Search />
         <Hero/>
         <TopOffers/><hr />
         <Recommended/><hr />

@@ -1,8 +1,10 @@
 import React from 'react'
-
+import Search from '../search/Search'
 const Dashboard = () => {
   return (
-    <div>Dashboard</div>
+    <div>
+      <Search />
+    </div>
   )
 }
 
