@@ -20,27 +20,10 @@ function App() {
       <Router>
         <div className="App">
           <NavBar />
-          <Search />
           <div className="content">
             <Switch>
               <Route exact path="/">
                 <Home/>
-                {/* <div class="row">
-                  <div class="col-sm">
-                    <Cards></Cards>
-                  </div>
-                  <div class="col-sm">
-                    <Cards></Cards>
-                  </div>
-                  <div class="col-sm">
-                    <Cards></Cards>
-
-                  </div>
-                  <div class="col-sm">
-                    <Cards></Cards>
-
-                  </div>
-                </div> */}
               </Route>
               <Route path="/login">
                 <Login />
