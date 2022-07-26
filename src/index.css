@@ -5,9 +5,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-transform: capitalize;
 }
 
-html{
+html {
+  /* font-size: 62.5%; */
+  /* scroll-padding-top: 6rem; */
   scroll-behavior: smooth;
 }
 code {
@@ -15,6 +18,15 @@ code {
     monospace;
 }
 
-a{
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+section {
+  padding: 2rem 9%;
+}
+
+a {
   text-decoration: none;
 }
