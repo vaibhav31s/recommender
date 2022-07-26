@@ -6,7 +6,8 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Register from "./Register/register";
 import SearchResult from "./search/SearchResult";
 import Search from "./search/Search";
-
+import Carousal from "./carousal/Carousal";
+import Cards from "./card/Cards";
 function App() {
   return (
     <div>
@@ -17,7 +18,22 @@ function App() {
           <div className="content">
             <Switch>
               <Route exact path="/">
-                <Home/>
+              <div class="row">
+              <div class="col-sm">
+                <Cards></Cards>
+              </div>
+              <div class="col-sm">
+              <Cards></Cards>
+              </div>
+              <div class="col-sm">
+                           <Cards></Cards>
+
+              </div>
+              <div class="col-sm">
+                           <Cards></Cards>
+
+              </div>
+            </div>
               </Route>
               <Route path="/login">
                 <Login />
@@ -30,6 +46,9 @@ function App() {
               </Route>
               <Route path="/register">
                 <Register />
+              </Route>
+              <Route path="/recommendations">
+
               </Route>
               <Route path="*"></Route>
             </Switch>
