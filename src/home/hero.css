@@ -146,7 +146,7 @@
 }
 
 .btn-add_to_cart:hover{
-  background: #007bff;
+  background: var(--blue) ;
   color: #fff;
   border: none;
 }
