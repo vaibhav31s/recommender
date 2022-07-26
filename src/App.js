@@ -40,9 +40,8 @@ function App() {
               <Route path="/recommendations">
                   <Recommendations/>
               </Route>
-              <Route path="/product/:id">
-                <Home/>
-
+              <Route path="/product/1">
+                <Recommendations/>
               </Route>
               <Route path="*"></Route>
             </Switch>

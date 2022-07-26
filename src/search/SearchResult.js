@@ -1,14 +1,19 @@
 import React from 'react'
 import Search from '../search/Search'
+import Cards from '../card/Cards'
 const SearchResult = () => {
   return (
     <div>
-    <Search />
-    
-    <div>
-    SearchResult
-    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo veritatis doloribus unde amet? At dolor esse similique. Nostrum aperiam soluta doloremque commodi magnam, aliquid error beatae molestiae placeat sapiente obcaecati Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum distinctio molestiae culpa dicta. Dolores, qui. Unde illo, rerum rem quos eligendi odio recusandae impedit ea a hic minus laborum ipsum, fugiat quod aliquam quibusdam? Ut accusantium eum cumque! Temporibus, iste numquam animi facere soluta perferendis.
-    </div>
+      <Search />
+
+      <div className='topoffer-container' id='top-offers'>
+        <div className="card-wrapper">
+          <Cards />
+          <Cards />
+          <Cards />
+          <Cards />
+        </div>
+      </div>
     </div>
   )
 }

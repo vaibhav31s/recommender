@@ -1,6 +1,6 @@
 .search-container{
     padding: 1rem;
-    background: #cce5ff;
+    background: var(--grey);
 }
 .search-container .input-group{
     display: flex;
