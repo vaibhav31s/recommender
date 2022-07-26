@@ -2,7 +2,7 @@ import NavBar from "./NavBar/Navbar";
 import Login from "./Login/Login";
 import Dashboard from "./dashboard/Dashboard";
 import Home from './home/Home';
-import { BrowserRouter as Router, Switch, Route, useHistory} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, useHistory } from "react-router-dom";
 import Register from "./Register/Register";
 import SearchResult from "./search/SearchResult";
 import Search from "./search/Search";
@@ -17,26 +17,27 @@ function App() {
       <Router>
         <div className="App">
           <NavBar />
-            <Search/>
+          <Search />
           <div className="content">
             <Switch>
               <Route exact path="/">
-              <div class="row">
-              <div class="col-sm">
-                <Cards></Cards>
-              </div>
-              <div class="col-sm">
-              <Cards></Cards>
-              </div>
-              <div class="col-sm">
-                           <Cards></Cards>
+                <Home/>
+                {/* <div class="row">
+                  <div class="col-sm">
+                    <Cards></Cards>
+                  </div>
+                  <div class="col-sm">
+                    <Cards></Cards>
+                  </div>
+                  <div class="col-sm">
+                    <Cards></Cards>
 
-              </div>
-              <div class="col-sm">
-                           <Cards></Cards>
+                  </div>
+                  <div class="col-sm">
+                    <Cards></Cards>
 
-              </div>
-            </div>
+                  </div>
+                </div> */}
               </Route>
               <Route path="/login">
                 <Login />
@@ -51,7 +52,10 @@ function App() {
                 <Register />
               </Route>
               <Route path="/recommendations">
-
+                <Home/>
+              </Route>
+              <Route path="/product/:id">
+                <Home/>
               </Route>
               <Route path="*"></Route>
             </Switch>
