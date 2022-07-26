@@ -1,11 +1,11 @@
 import React from 'react'
 import './topoffers.css'
 import Cards from '../card/Cards'
-const TopOffers = () => {
+const Trending = () => {
 	return (
-		<div className='topoffer-container' id='top-offers'>
+		<div className='topoffer-container' id='trending'>
 			<div className="header-wrapper">
-				<h1>Top Offers</h1>
+				<h1>Trending</h1>
 			</div>
 			<div className="card-wrapper">
 				<Cards />
@@ -17,4 +17,4 @@ const TopOffers = () => {
 	)
 }
 
-export default TopOffers
+export default Trending

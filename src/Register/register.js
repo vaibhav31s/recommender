@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import './register.css'
 import {submit_registration} from './registerEvent';
+import { Link } from 'react-router-dom';
 const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -42,6 +43,7 @@ const Register = () => {
        
         <input type="submit" value="Registration" class="register-button"/>
     </form>
+    <p id="register-link">Already have an account? <Link to="/login">Login</Link></p>
 </div>
 </div>
   )

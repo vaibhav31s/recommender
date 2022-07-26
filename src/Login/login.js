@@ -1,4 +1,4 @@
-import React, { useState} from "react";
+import React, { useState, useEffect} from "react";
 import "./login.css";
 import {submit_login} from './SubmitEvent';
 import { Link } from "react-router-dom";
@@ -12,12 +12,14 @@ const Login = () => {
     const LoginClick =()=>{
         localStorage.setItem("b_email", email);
         localStorage.setItem("b_password", password);
-        localStorage.setItem("endpoint", sellerOrBuyer);
-
+        localStorage.setItem("endpoint", sellerOrBuyer)
 
         console.log(sellerOrBuyer)
         // submit_login();
     }
+    // useEffect(()=>{
+        
+    // },[])
     return (
         <div className="container container-login">
             <div class="wrap">
@@ -34,7 +36,7 @@ const Login = () => {
                     <input type="submit" value="Login" class="register-button"/>
                 </form>
 
-                Don't have account? <Link>Register</Link>
+                <p id="register-link">Don't have account? <Link to="/register">Register</Link></p>
             </div>
         </div>
     );
