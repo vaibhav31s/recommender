@@ -15,6 +15,7 @@ function Search({ details }) {
     const [input, setInput] = useState("");
     return (
         <div className="search-container">
+
             <div class="input-group">
                 <div class="form-outline">
                     <input type="search" id="form1" class="form-control" list='input' placeholder='search' onChange={(e)=>{setInput(e.target.value)}}/>
