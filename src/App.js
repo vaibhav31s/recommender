@@ -6,9 +6,12 @@ import { BrowserRouter as Router, Switch, Route, useHistory} from "react-router-
 import Register from "./Register/Register";
 import SearchResult from "./search/SearchResult";
 import Search from "./search/Search";
-import { useState } from "react";
-const App =()=> {
-  const history = useHistory();
+
+import Carousal from "./carousal/Carousal";
+import Cards from "./card/Cards";
+
+function App() {
+  console.log(window.location.pathname)
   return (
     <>
       <Router>
@@ -18,7 +21,22 @@ const App =()=> {
           <div className="content">
             <Switch>
               <Route exact path="/">
-                <Home/>
+              <div class="row">
+              <div class="col-sm">
+                <Cards></Cards>
+              </div>
+              <div class="col-sm">
+              <Cards></Cards>
+              </div>
+              <div class="col-sm">
+                           <Cards></Cards>
+
+              </div>
+              <div class="col-sm">
+                           <Cards></Cards>
+
+              </div>
+            </div>
               </Route>
               <Route path="/login">
                 <Login />
@@ -31,6 +49,9 @@ const App =()=> {
               </Route>
               <Route path="/register">
                 <Register />
+              </Route>
+              <Route path="/recommendations">
+
               </Route>
               <Route path="*"></Route>
             </Switch>

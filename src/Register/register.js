@@ -5,18 +5,19 @@ const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [sellerOrBuyer, setSellerOrBuyer] = useState("/login");
-  const [address, setAddress] = useState("");
-  const [states, setStates] = useState("");
-  const [city, setCity] = useState("");
-  const [pin, setPin] = useState("");
+  const [name, setName] = useState("");
+  const [username, setUsername] = useState("");
+
 
   const LoginClick =()=>{
+    
+      localStorage.setItem("b_email", name);
+      localStorage.setItem("b_password", username);
+
       localStorage.setItem("b_email", email);
       localStorage.setItem("b_password", password);
-      localStorage.setItem("b_address", address);
-      localStorage.setItem("b_states", states);
-      localStorage.setItem("b_city", city);
-      localStorage.setItem("b_pin", pin);
+
+  
 
 
       console.log(sellerOrBuyer)
@@ -34,25 +35,11 @@ const Register = () => {
             <input type="radio" name="sex" value="M" id="sex_m" class="register-switch-input"/>
             <label for="sex_m" class="register-switch-label" onClick={()=>{setSellerOrBuyer("/blogin")}}>Seller</label>
         </div>
+        <input type="name" class="register-input" placeholder="Name" onChange={(e)=>setName(e.target.value)}/>
+        <input type="username" class="register-input" placeholder="Username" onChange={(e)=>setUsername(e.target.value)}/>
         <input type="email" class="register-input" placeholder="Email address" onChange={(e)=>setEmail(e.target.value)}/>
         <input type="password" class="register-input" placeholder="Password" onChange={(e)=>setPassword(e.target.value)}/>
-        <input type="address" class="register-input" placeholder="Address" onChange={(e)=>setAddress(e.target.value)}/>
-        
-        <select id="inputState" class="form-control">
-          <option selected onChange={(e)=>setStates(e.target.value)}>Select State...</option>
-          <option>Maharashtra</option>
-          <option>Delhi</option>
-          <option>Karnataka</option>
-
-        </select>
-        <select id="inputCity" class="form-control">
-          <option selected onChange={(e)=>setCity(e.target.value) }>Select City...</option>
-          <option>Mumbai</option>
-          <option>Pune</option>
-          <option>Palghar</option>
-
-        </select>
-        <input type="pincode" onChange={(e)=>setPin(e.target.value) } class="register-input" placeholder="Pin Code"/>
+       
         <input type="submit" value="Registration" class="register-button"/>
     </form>
 </div>
