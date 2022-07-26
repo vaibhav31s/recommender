@@ -7,9 +7,8 @@ const SearchResult = () => {
   const location = useLocation();
   const [data, setData] = useState([]);
   const url = process.env.REACT_APP_BASE_URL;
+  console.log(location.state.input)
   useEffect(() => {
-    console.log(url)
-    console.log(location.state.input)
     fetch(url + "/product/search?searchKey=" + location.state.input)
       .then(res => res.json())
       .then(data => {
@@ -31,23 +30,10 @@ const SearchResult = () => {
           {
               data.map((pack,id)=>{
                 return(
-                  <Cards key={id}/>
+                  <Cards pack={pack} key={id}/>
                 )
               })
           }
-          {/* {
-            
-
-[...const n = 8;
-
-[...Array(n)].map((elementInArray, index) => ( 
-    <div className="" key={i}> Whatever needs to be rendered repeatedly </div> 
-    ) 
-)(8)].map((data, i) => ( 
-    <div className="" key={i}> Whatever needs to be rendered repeatedly </div> 
-    ) 
-)
-          } */}
         </div>
       </div>
     </div>

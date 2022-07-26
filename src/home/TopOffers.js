@@ -1,6 +1,7 @@
 import React from 'react'
 import './topoffers.css'
 import Cards from '../card/Cards'
+import data from './topData.json'
 const TopOffers = () => {
 	return (
 		<div className='topoffer-container' id='top-offers'>
@@ -8,10 +9,13 @@ const TopOffers = () => {
 				<h1>Top Offers</h1>
 			</div>
 			<div className="card-wrapper">
-				<Cards />
-				<Cards />
-				<Cards />
-				<Cards />
+				{
+					data.map((pack, id) => {
+						return (
+							<Cards pack={pack} key={id} />
+						)
+					})
+				}
 			</div>
 		</div>
 	)

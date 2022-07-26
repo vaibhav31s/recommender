@@ -12,12 +12,12 @@ function Search({ details }) {
         // setSearchField(e.target.value);
     };
 
-    const  [input, setInput]= useState("");
+    const [input, setInput] = useState("");
     return (
         <div className="search-container">
             <div class="input-group">
                 <div class="form-outline">
-                    <input type="search" id="form1" class="form-control" list='input' placeholder='search' />
+                    <input type="search" id="form1" class="form-control" list='input' placeholder='search' onChange={(e)=>{setInput(e.target.value)}}/>
                     {/* <List/> */}
                     <datalist id="input">
                         {
@@ -33,9 +33,9 @@ function Search({ details }) {
 
                 </div>
                 <Link className="btn btn-primary" to={{
-                                pathname: "/search",
-                                state: { input: input }
-                            }}>
+                    pathname: "/search",
+                    state: { input: input }
+                }}>
                     <BsSearch />
                 </Link>
             </div>
