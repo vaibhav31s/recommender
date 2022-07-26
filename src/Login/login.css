@@ -12,6 +12,14 @@
   background-color: #cce5ff;
 }
 
+.wrap form{
+  margin-bottom: 1rem;
+}
+
+#register-link{
+  color: #000;
+}
+
 .register-title {
   margin-top: 0;
   width: 270px;
