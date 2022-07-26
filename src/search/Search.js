@@ -22,16 +22,17 @@ function Search({ details }) {
                             {
                                 data.map((item)=>{
                                     return(
-                                        <option value={item.text}>{item.text}</option>
+                                        <option value={item.seller}>{item.sellerx}</option>
                                     )
                                 })
                             }
                         </datalist>
+                       
 
 
 
                     </div>
-                    <Link className="btn btn-primary" to="/search">
+                    <Link className="btn btn-primary" onClick={click} to="/search">
                         <BsSearch />
                     </Link>
                 </div>

@@ -26,7 +26,7 @@ const Footer = () => {
               </li>
           </ul>
       </div>
-      <div class="boujee-text d-flex justify-content-center">The Bugs Stops Here</div>
+      <div class="boujee-text d-flex justify-content-center">The Bug Stops Here</div>
       </>
   )
 }

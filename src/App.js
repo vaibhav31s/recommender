@@ -13,6 +13,7 @@ import Carousal from "./carousal/Carousal";
 import Cards from "./card/Cards";
 import Recommendations from "./recommendations/Recommendations";
 import Footer from "./footer/Footer";
+import Test from "./Test";
 function App() {
   console.log(window.location.pathname)
   return (
@@ -48,6 +49,7 @@ function App() {
             </Switch>
           </div>
         </div>
+        <Test></Test>
         <Footer></Footer>
       </Router>
     </>
