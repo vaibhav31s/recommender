@@ -8,12 +8,12 @@ import {
   Switch,
   Route
 } from "react-router-dom";
-import Register from './Register/register'
+import Register from './Register/Register'
 function App() {
   return (
     <div>
       <Router>
-      <div className="App">
+      <div className="App"> 
         <NavBar />
         <div className="content">
           <Switch>

@@ -19,7 +19,6 @@ export class login extends Component {
                 <span><small class="fa fa-eye-slash passcode"></small></span>
                 
             </div>
-            
                <p class="forget">Forgot your password?</p>
                
                    <button class="sign-in">Sign in</button>
@@ -27,7 +26,9 @@ export class login extends Component {
                <p class="sign-up">Dont't have an account?<a href="#"> Sign up</a></p>
             
         </div>
+        
     </div>
+    
     )
   }
 }
