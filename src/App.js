@@ -12,7 +12,7 @@ import Search from "./search/Search";
 import Carousal from "./carousal/Carousal";
 import Cards from "./card/Cards";
 import Recommendations from "./recommendations/Recommendations";
-
+import Footer from "./footer/Footer";
 function App() {
   console.log(window.location.pathname)
   return (
@@ -65,6 +65,7 @@ function App() {
             </Switch>
           </div>
         </div>
+        <Footer></Footer>
       </Router>
     </>
   );
