@@ -62,7 +62,7 @@ const Hero = () => {
                         <h3>nike metcon shoes</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia minus totam consequatur aperiam
                             numquam mollitia a libero, eos nobis! Voluptatum?</p>
-                        <a href="#" className="btn-add_to_cart">add to cart</a>
+                        {/* <a href="#" className="btn-add_to_cart">add to cart</a> */}
                     </div>
                     <div class="image">
                         <img src={Item3} class="shoe" alt="" />

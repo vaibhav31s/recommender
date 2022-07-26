@@ -21,7 +21,7 @@ const Login = () => {
         
     // },[])
     return (
-        <div className="container container-login">
+        <div className="container-login">
             <div class="wrap">
                 <h1 class="register-title">Welcome</h1>        
                 <form action="#" onSubmit={LoginClick}>
