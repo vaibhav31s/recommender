@@ -1,7 +1,7 @@
 
 import './App.css';
 import NavBar from './NavBar/navbar';
-import Login from './Login/login';
+import Login from './Login/Login';
 import  Dashboard from './dashboard/Dashboard';
 import {
   BrowserRouter as Router,
