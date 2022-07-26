@@ -11,6 +11,7 @@ const Login = () => {
     const LoginClick =()=>{
         localStorage.setItem("b_email", email);
         localStorage.setItem("b_password", password);
+        localStorage.setItem("endpoint", sellerOrBuyer);
 
 
         console.log(sellerOrBuyer)
