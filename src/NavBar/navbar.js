@@ -6,9 +6,9 @@ const Navbar = () => {
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-light">
-        <a className="navbar-brand" href="#">
+        <Link className="navbar-brand" to="/">
           Recommender
-        </a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"

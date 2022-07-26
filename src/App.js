@@ -2,18 +2,19 @@ import NavBar from "./NavBar/Navbar";
 import Login from "./Login/Login";
 import Dashboard from "./dashboard/Dashboard";
 import Home from './home/Home';
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, useHistory} from "react-router-dom";
 import Register from "./Register/Register";
 import SearchResult from "./search/SearchResult";
 import Search from "./search/Search";
-function App() {
-  console.log(window.location.pathname)
+import { useState } from "react";
+const App =()=> {
+  const history = useHistory();
   return (
-    <div>
+    <>
       <Router>
         <div className="App">
           <NavBar />
-          <Search/>
+            <Search/>
           <div className="content">
             <Switch>
               <Route exact path="/">
@@ -36,7 +37,7 @@ function App() {
           </div>
         </div>
       </Router>
-    </div>
+    </>
   );
 }
 
