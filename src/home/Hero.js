@@ -38,7 +38,7 @@ const Hero = () => {
                 <div class="slide">
                     <div class="content">
                         <span>Men's T-Shirt</span>
-                        <h3>nike metcon shoes</h3>
+                        <h3>T-shirt</h3>
                         <p>Our tee is cut from a sustainable modal and recycled polyester knit with enhanced elasticity and an activewear feel, this lightweight wardrobe staple layers comfortable under sweaters and jackets alike.</p>
                     </div>
                     <div class="image">
