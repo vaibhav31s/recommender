@@ -1,7 +1,7 @@
 .navbar.navbar-expand-lg.navbar-light{
     background-color: var(--blue);;
     color: #fff;
-    padding-left: 1rem;
+    padding-inline: 1rem;
 }
 .navbar.navbar-expand-lg.navbar-light a{
     color: #fff;

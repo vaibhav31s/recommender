@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Cards from '../card/Cards'
 import './recommendations.css'
 import Search from '../search/Search'
@@ -8,22 +8,26 @@ import { useLocation } from "react-router-dom"
 const Recommendations = () => {
   const location = useLocation();
   // console.log(location.state.img);
-  const data = location.state.data;
+  const data = location.state.data
   const url = process.env.REACT_APP_RECOMMEND_URL;
-  useEffect(()=>{
-    fetch(url+"?productId="+"27044")
-    .then(response=>response.json())
-    .then((data)=>{
-      console.log(data)
-    })
-  },[])
+  const [recom, setRecom] = useState()
+
+  // useEffect(()=>{
+  //   fetch(url+"?productId="+data.productId || data.id)
+  //   .then(response=>response.json())
+  //   .then((res)=>{
+  //     setRecom(res);
+  //     console.log(res);
+  //   })
+  //   window. scrollTo(0, 0);
+  // },[])
   return (
     <div class="s">
       <Search />
       <div class="product_view">
         <div class="product_img">
           {/* <img class="img1" src="http://assets.myntassets.com/v1/images/style/properties/072af0cd079f20296c72f3594a21f141_images.jpg" /> */}
-          <img class="img1" src={data.image ? data.image : "https://images.unsplash.com/photo-1493612276216-ee3925520721?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cmFuZG9tfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"} />
+          <img class="img1" src={data.image || data.link} />
 
         </div>
         <div className="product_detail">
@@ -56,20 +60,20 @@ const Recommendations = () => {
                 <div class="box">
                   <i class="fas fa-shipping-fast"></i>
                   <h3>fast delivery</h3>
-                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla, nam!</p>
+                  <p>ECOMS directly manages delivery for this product. Order delivery tracking to your doorstep is available.</p>
                 </div>
 
 
                 <div class="box">
                   <i class="fas fa-undo"></i>
                   <h3>10 days replacement</h3>
-                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla, nam!</p>
+                  <p>Keep the item in its original condition and packaging along with MRP tag and accessories for a successful pickup.</p>
                 </div>
 
                 <div class="box">
                   <i class="fas fa-headset"></i>
                   <h3>24 x 7 support</h3>
-                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla, nam!</p>
+                  <p>What would you like help with today? You can quickly take care of most things here, or connect with us when needed.</p>
                 </div>
 
               </div>
@@ -78,7 +82,7 @@ const Recommendations = () => {
         </div>
       </div>
 
-      <Recommended data={data}/>
+      <Recommended id={data.productId || data.id}/>
     </div>
   )
 }

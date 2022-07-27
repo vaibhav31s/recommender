@@ -1,8 +1,11 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import './topoffers.css'
 import Cards from '../card/Cards'
 import data from './topData.json'
 const TopOffers = () => {
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	})
 	return (
 		<div className='topoffer-container' id='top-offers'>
 			<div className="header-wrapper">

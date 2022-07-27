@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect} from "react";
 import "./login.css";
 import { submit_login } from './SubmitEvent';
 import { Link } from "react-router-dom";
@@ -27,21 +27,20 @@ const Login = () => {
             method: "POST",
             body: JSON.stringify(userData),
         })
-            .then((response) => { response.json() })
-            .then(data =>{console.log(data)})
+            .then((response) => { response.json();
+            console.log(response)})
+            .then(data => { console.log(data) })
         // submit_login();
     }
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    })
     return (
         <div className="container container-login">
             <div class="wrap">
                 <h1 class="register-title">Welcome</h1>
                 <form action="#" onSubmit={LoginClick}>
-                    <div class="register-switch">
-                        <input type="radio" name="sex" value="F" id="sex_f" class="register-switch-input" checked />
-                        <label htmlFor="sex_f" class="register-switch-label" onClick={() => { setSellerOrBuyer("/login") }}>Buyer</label>
-                        <input type="radio" name="sex" value="M" id="sex_m" class="register-switch-input" />
-                        <label htmlFor="sex_m" class="register-switch-label" onClick={() => { setSellerOrBuyer("/blogin") }}>Seller</label>
-                    </div>
                     <input type="email" class="register-input" placeholder="Email address" onChange={(e) => setEmail(e.target.value)} />
                     <input type="password" class="register-input" placeholder="Password" onChange={(e) => setPassword(e.target.value)} />
                     <input type="submit" value="Login" class="register-button" />

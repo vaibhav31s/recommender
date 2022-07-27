@@ -1,17 +1,19 @@
 import React, { useState, useEffect } from 'react'
 import './topoffers.css'
 import Cards from '../card/Cards'
-import data from './recommended.json'
-const Recommended = ({data}) => {
+const Recommended = ({ id }) => {
 	const [pack, setPack] = useState([]);
 	const url = process.env.REACT_APP_RECOMMEND_URL;
 
 	useEffect(() => {
-			fetch(url + "?productId=" + pack.productId)
-				.then(res => res.json())
-				.then(data => {
-					setPack(data);
-				})
+		console.log(url);
+		fetch(url + "?productId=" + id)
+			.then(res => res.json())
+			.then(data => {
+				setPack(data);
+			})
+		// setPack(data)
+		window.scrollTo(0, 0);
 	}, [])
 
 	return (
@@ -21,10 +23,9 @@ const Recommended = ({data}) => {
 			</div>
 			<div className="card-wrapper">
 				{
-					(pack
-						? pack : data).map((pack, id) => {
+					pack.map((p, id) => {
 							return (
-								<Cards pack={pack} key={id} />
+								<Cards pack={p} key={id} />
 							)
 						})
 				}

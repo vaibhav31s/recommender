@@ -24,12 +24,13 @@ const Hero = () => {
         slides[index].classList.add("active");
     }
 
-    const slidesHandler = () =>{
+    const slidesHandler = () => {
         setSlides(document.querySelectorAll(".slide-container"));
     }
-    useEffect(()=>{
+    useEffect(() => {
         slidesHandler();
-    },[])
+        window.scrollTo(0, 0);
+    }, [])
     return (
         <div class="home" id="home">
 

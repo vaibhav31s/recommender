@@ -8,10 +8,11 @@ const Cards = (props) => {
             <Link to={{
                 pathname: "/recommendations",
                 state: { data: data }
+
             }}>
                 <div class="badge">Hot</div>
                 <div class="product-tumb">
-                    <img src={data.image} alt="" />
+                    <img src={data.link || data.image} alt="" />
                 </div>
                 <div class="product-details">
                     <span class="product-catagory">{data.gender + ", " + data.articleType}</span>

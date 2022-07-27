@@ -44,7 +44,7 @@ function App() {
               <Route path="/product/1">
                 <Recommendations/>
               </Route>
-              <Route path="*"></Route>
+              <Route path="*">404</Route>
             </Switch>
           </div>
         </div>

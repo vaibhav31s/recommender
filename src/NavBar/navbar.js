@@ -1,8 +1,11 @@
-import React, { Component } from "react";
+import React, { Component, useEffect } from "react";
 import { FiMenu } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import './navbar.css'
 const Navbar = () => {
+  useEffect(()=>{
+    window. scrollTo(0, 0);
+  })
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-light">

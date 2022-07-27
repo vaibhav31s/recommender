@@ -1,8 +1,11 @@
-import React from 'react'
+import Reac, {useEffect} from 'react'
 import './topoffers.css'
 import Cards from '../card/Cards'
 import data from './trending.json'
 const Trending = () => {
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	})
 	return (
 		<div className='topoffer-container' id='trending'>
 			<div className="header-wrapper">
