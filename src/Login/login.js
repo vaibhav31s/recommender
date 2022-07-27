@@ -29,7 +29,7 @@ const Login = () => {
         })
             .then((response) => { response.json();
             console.log(response)})
-            .then(data => { console.log(data) })
+            .then(data => {  })
         // submit_login();
     }
 

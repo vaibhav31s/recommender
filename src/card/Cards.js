@@ -1,14 +1,18 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 import './cards.css'
 const Cards = (props) => {
     const data = props.pack;
+    const history = useHistory()
     return (
         <div class="product-card">
             <Link to={{
                 pathname: "/recommendations",
                 state: { data: data }
 
+            }}
+            onClick={()=>{ window.scrollTo(0, 0);
             }}>
                 <div class="badge">Hot</div>
                 <div class="product-tumb">
