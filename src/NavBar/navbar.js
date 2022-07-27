@@ -7,7 +7,7 @@ const Navbar = () => {
     <div>
       <nav className="navbar navbar-expand-lg navbar-light">
         <Link className="navbar-brand" to="/">
-          Recommender
+          ECOMS
         </Link>
         <button
           className="navbar-toggler"
@@ -34,39 +34,14 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#top-offers">
+              <a className="nav-link" href="http://localhost:3000/#top-offers">
                 Offers
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#trending">
+              <a className="nav-link" href="http://localhost:3000/#trending">
                 Trending
               </a>
-            </li>
-            <li className="nav-item dropdown">
-              <a
-                className="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                Dropdown
-              </a>
-              <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a className="dropdown-item" href="#">
-                  Action
-                </a>
-                <a className="dropdown-item" href="#">
-                  Another action
-                </a>
-                <div className="dropdown-divider"></div>
-                <a className="dropdown-item" href="#">
-                  Something else here
-                </a>
-              </div>
             </li>
           </ul>
         </div>

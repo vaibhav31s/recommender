@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Cards from '../card/Cards'
 import './recommendations.css'
 import Search from '../search/Search'
@@ -7,21 +7,34 @@ import { useLocation } from "react-router-dom"
 // import StarRating from 'react-svg-star-rating'
 const Recommendations = () => {
   const location = useLocation();
-  console.log(location.state.img);
+  // console.log(location.state.img);
+  const data = location.state.data;
+  const url = process.env.REACT_APP_RECOMMEND_URL;
+  useEffect(()=>{
+    fetch(url+"?productId="+"27044")
+    .then(response=>response.json())
+    .then((data)=>{
+      console.log(data)
+    })
+  },[])
   return (
     <div class="s">
-      <Search/>
+      <Search />
       <div class="product_view">
         <div class="product_img">
-          {/* <img class="img1" src="https://images.unsplash.com/photo-1493612276216-ee3925520721?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cmFuZG9tfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" /> */}
-          <img class="img1" src={location.state.img} />
+          {/* <img class="img1" src="http://assets.myntassets.com/v1/images/style/properties/072af0cd079f20296c72f3594a21f141_images.jpg" /> */}
+          <img class="img1" src={data.image ? data.image : "https://images.unsplash.com/photo-1493612276216-ee3925520721?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cmFuZG9tfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"} />
 
         </div>
         <div className="product_detail">
-          <h1>Lorem ipsum dolor sit amet consectetur.</h1>
+          <span class="product-catagory">{data.gender + ", " + data.articleType}</span>
+          <h1>{data.productDisplayName}</h1>
           <div className="desc">
+            <small>{data.masterCategory}, {data.subCategory}</small><br />
             <small>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga facere, facilis voluptatem, consequuntur quibusdam aperiam harum sint dolorum deleniti nisi assumenda, molestias amet sit iure vero. Accusamus itaque, quo sequi recusandae sint minus sapiente assumenda.</small><br />
 
+            <p><b>Color: </b>{data.baseColour}</p>
+            <p><b>Seller: </b>{data.seller}</p>
             <span class="fa fa-star checked"></span>
             <span class="fa fa-star checked"></span>
             <span class="fa fa-star checked"></span>
@@ -63,33 +76,9 @@ const Recommendations = () => {
             </div>
           </div>
         </div>
-
       </div>
 
-      <Recommended/>
-
-    
-
-      {/* <div>
-        <div className="header-wrapper">
-          <h1>You May Like this</h1>
-        </div>
-        <div class="row">
-          <div class="col-sm">
-            <Cards></Cards>
-          </div>
-          <div class="col-sm">
-            <Cards></Cards>
-          </div>
-          <div class="col-sm">
-            <Cards></Cards>
-
-          </div>
-          <div class="col-sm">
-            <Cards></Cards>
-          </div>
-        </div>
-      </div> */}
+      <Recommended data={data}/>
     </div>
   )
 }

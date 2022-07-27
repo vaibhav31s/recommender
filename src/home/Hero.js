@@ -1,14 +1,15 @@
 import React, { useEffect, useRef, useState } from 'react'
 import './hero.css'
 import Images from "../images/Images"
+import data from './trending.json'
 import Item1 from "../images/Item1.png"
-import Item2 from "../images/Item2.png"
+import Item2 from "../images/home-shoe-2.png"
 import Item3 from "../images/Item3.png"
 import { Link } from 'react-router-dom'
 // import Shoe from '../images/home-shoe-1.png'
 const Hero = () => {
-
-    let slides = document.querySelectorAll(".slide-container");
+    const [slides, setSlides] = useState()
+    // let slides = document.querySelectorAll(".slide-container");
     let index = 0;
 
     function next() {
@@ -23,6 +24,12 @@ const Hero = () => {
         slides[index].classList.add("active");
     }
 
+    const slidesHandler = () =>{
+        setSlides(document.querySelectorAll(".slide-container"));
+    }
+    useEffect(()=>{
+        slidesHandler();
+    },[])
     return (
         <div class="home" id="home">
 
@@ -31,14 +38,7 @@ const Hero = () => {
                     <div class="content">
                         <span>Men's T-Shirt</span>
                         <h3>nike metcon shoes</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia minus totam consequatur aperiam
-                            numquam mollitia a libero, eos nobis! Voluptatum?</p>
-                        <Link
-                            to={{
-                                pathname: "/product/1",
-                                state: { img: Item1 }
-                            }}
-                            className="btn-add_to_cart">View</Link>
+                        <p>Our tee is cut from a sustainable modal and recycled polyester knit with enhanced elasticity and an activewear feel, this lightweight wardrobe staple layers comfortable under sweaters and jackets alike.</p>
                     </div>
                     <div class="image">
                         <img width="200px" src={Item1} class="shoe" alt="" />
@@ -51,12 +51,7 @@ const Hero = () => {
                     <div class="content">
                         <span>nike blue shoes</span>
                         <h3>nike metcon shoes</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia minus totam consequatur aperiam
-                            numquam mollitia a libero, eos nobis! Voluptatum?</p>
-                        <Link to={{
-                                pathname: "/product/1",
-                                state: { img: Item2 }
-                            }} className="btn-add_to_cart">View</Link>
+                        <p>Our latest version includes foam cushioning that's softer than ever, and abrasion-resistant rubber for extra durability on rocky roads. With updates like these, you'll be able to stay focused as you push towards the finishing line.</p>
                     </div>
                     <div class="image">
                         <img src={Item2} class="shoe" alt="" />
@@ -67,17 +62,12 @@ const Hero = () => {
             <div class="slide-container">
                 <div class="slide">
                     <div class="content">
-                        <span>nike yellow shoes</span>
-                        <h3>nike metcon shoes</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia minus totam consequatur aperiam
-                            numquam mollitia a libero, eos nobis! Voluptatum?</p>
-                        <Link to={{
-                                pathname: "/product/1",
-                                state: { img: Item3 }
-                            }} className="btn-add_to_cart">View</Link>
+                        <span>{data[3].articleType}</span>
+                        <h3>{data[3].productDisplayName}</h3>
+                        <p>The Fastrack watches are a popular choice of accessories for the youth, as they feature trendy and edgy designs that give off a modern look. These portable fashion accessories can give your look a lift with their stylish and eye-catching designs.</p>
                     </div>
                     <div class="image">
-                        <img src={Item3} class="shoe" alt="" />
+                        <img src={data[3].image} class="shoe" alt="" />
                     </div>
                 </div>
             </div>
