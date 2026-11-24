@@ -1,5 +1,7 @@
+import homeBg1 from "../images/home-bg-1.jpg";
+
 const Images = {
-    Shoe1 : require("../images/home-bg-1.jpg").default,
+    Shoe1 : homeBg1,
     // Text1 : require("./home-shoe-1.png").default,
     // Shoe2 : require("./home-shoe-2.png").default,
     // Text2 : require("./home-shoe-2.png").default,

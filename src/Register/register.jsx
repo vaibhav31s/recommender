@@ -9,7 +9,7 @@ const Register = () => {
   const [sellerOrBuyer, setSellerOrBuyer] = useState("/login");
   const [name, setName] = useState("");
   const [username, setUsername] = useState("");
-  const url = process.env.REACT_APP_BASE_URL;
+  const url = import.meta.env.REACT_APP_BASE_URL;
 
   const LoginClick = (e) => {
     e.preventDefault();

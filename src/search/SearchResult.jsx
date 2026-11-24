@@ -6,7 +6,7 @@ import { useLocation } from 'react-router-dom'
 const SearchResult = () => {
   const location = useLocation();
   const [data, setData] = useState([]);
-  const url = process.env.REACT_APP_BASE_URL;
+  const url = import.meta.env.REACT_APP_BASE_URL;
   useEffect(() => {
     console.log(url)
     console.log(location.state.input)

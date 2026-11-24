@@ -8,7 +8,7 @@ const Login = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [sellerOrBuyer, setSellerOrBuyer] = useState("/login");
-    const url = process.env.REACT_APP_BASE_URL;
+    const url = import.meta.env.REACT_APP_BASE_URL;
     const LoginClick = (e) => {
         e.preventDefault();
         localStorage.setItem("b_email", email);
